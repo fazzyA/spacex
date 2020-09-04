@@ -8,6 +8,7 @@ interface OwnProps {
 
 const LaunchProfileContainer = ({ id }: OwnProps) => {
   const { data, error, loading,refetch } = useLaunchProfileQuery({ variables: { id: String(id) } });
+  console.log('refecthing faiza',refetch)
   React.useEffect(() => {
     refetch();
   }, [id]);
